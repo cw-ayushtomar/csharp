@@ -5,15 +5,20 @@ namespace Project
 {
 public class Card
     {
-        public string suit;
-        public string rank;
+        private string suit;
+        private string rank;
         public Card(string suit,string rank)
         {
             this.suit=suit;
             this.rank=rank;
         }
 
-        public string ToString()
+        public String getRank()
+        {
+            return this.rank;
+        }
+
+        public new string ToString()
         {
             return (this.rank+" of "+this.suit);
         }

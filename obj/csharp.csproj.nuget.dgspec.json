@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\work\\development\\csharp\\csharp.csproj": {}
+    "D:\\dev stuff\\csharp\\csharp.csproj": {}
   },
   "projects": {
-    "F:\\work\\development\\csharp\\csharp.csproj": {
+    "D:\\dev stuff\\csharp\\csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\work\\development\\csharp\\csharp.csproj",
+        "projectUniqueName": "D:\\dev stuff\\csharp\\csharp.csproj",
         "projectName": "csharp",
-        "projectPath": "F:\\work\\development\\csharp\\csharp.csproj",
-        "packagesPath": "C:\\Users\\Ayush\\.nuget\\packages\\",
-        "outputPath": "F:\\work\\development\\csharp\\obj\\",
+        "projectPath": "D:\\dev stuff\\csharp\\csharp.csproj",
+        "packagesPath": "C:\\Users\\ayush\\.nuget\\packages\\",
+        "outputPath": "D:\\dev stuff\\csharp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Ayush\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ayush\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

@@ -6,7 +6,7 @@ namespace Project
 
 public class Deck 
     {
-        public List<Card> deck = new List<Card>();
+        private List<Card> deck = new List<Card>();
         public Deck(string[] suits,string[] ranks)
         {
             this.deck.Clear();
@@ -42,7 +42,7 @@ public class Deck
 
             catch(Exception e)
             {
-                Console.WriteLine("exception occured");
+                Console.WriteLine("exception occured"+e);
             }
             
                 return single_card;

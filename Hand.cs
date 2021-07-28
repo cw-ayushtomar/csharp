@@ -5,9 +5,9 @@ namespace Project
 {
 public class Hand
     {
-        public List<Card> cards = new List<Card>();
-        public long value;
-        public int aces;
+        private List<Card> cards = new List<Card>();
+        private long value;
+        private int aces;
         public Hand()
         {
             this.cards.Clear();
@@ -18,9 +18,9 @@ public class Hand
         public void add_card(Card card,Dictionary<string, int> values)
         {
             this.cards.Add(card);
-            this.value=this.value+values[card.rank];
+            this.value=this.value+values[card.getRank()];
         
-            if (card.rank.Equals("ace")==true)
+            if (card.getRank().Equals("ace")==true)
                 this.aces=this.aces+1;
         }
 
@@ -33,6 +33,15 @@ public class Hand
                 this.aces=this.aces-1;
 
             }
+        }
+
+        public List<Card> getCards()
+        {
+            return cards;
+        }
+        public long getValue()
+        {
+            return value;
         }
     }
 }

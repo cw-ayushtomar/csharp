@@ -6,13 +6,13 @@ namespace Project
 
 public class ProjectMain: Gameplay
 {
-    static bool playing =true;
     public static void Main(string[] args)
     {
+        bool playing =true;
+
 
         String[] suits = new String[] {"spades","diamonds","clubs","spades"};
         String[] ranks = new String[] {"two","three","four","five","six","seven","eight","nine","ten","jack","queen","king","ace"};
-        bool playing=true;
         Dictionary<string,int> values=new  Dictionary<string,int>();
         values.Add("two",2);
         values.Add("three",3);
@@ -52,7 +52,7 @@ public class ProjectMain: Gameplay
                 show_some(player_hand,dealer_hand);
                 Console.WriteLine("------------------------------------------------------------------------------------------");
                 
-                if (player_hand.value>21)
+                if (player_hand.getValue()>21)
                 {
                     
                     player_busts(player_chips);
@@ -62,21 +62,21 @@ public class ProjectMain: Gameplay
                 }
             }
 
-            if (player_hand.value<=21)
+            if (player_hand.getValue()<=21)
             {
-                while (dealer_hand.value<=21)
+                while (dealer_hand.getValue()<=21)
                 {
                     hit(dealer_hand,deck,values);
                     show_all(player_hand,dealer_hand);
                     
 
-                    if (dealer_hand.value>21)
+                    if (dealer_hand.getValue()>21)
                         {player_wins(player_chips);
                         break;}
-                    else if (dealer_hand.value>player_hand.value)
+                    else if (dealer_hand.getValue()>player_hand.getValue())
                         {dealer_wins(player_chips);
                         break;}
-                    else if (player_hand.value>dealer_hand.value)
+                    else if (player_hand.getValue()>dealer_hand.getValue())
                         {player_wins(player_chips);
                         break;}
                     else
@@ -84,7 +84,7 @@ public class ProjectMain: Gameplay
                         break;}
                 }
             }
-            Console.WriteLine("\nPlayer total chips are : "+player_chips.total);
+            Console.WriteLine("\nPlayer total chips are : "+player_chips.getTotal());
             Console.WriteLine("enter 'y' to play again and 'n' to end the game") ;
             string new_game= Console.ReadLine();
             char c=new_game.ToLower()[0];

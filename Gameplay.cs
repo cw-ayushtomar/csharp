@@ -12,8 +12,9 @@ public class Gameplay
         {
             Console.WriteLine("Enter the amount of bet placed");
 
-            chips.bet=Convert.ToInt32(Console.ReadLine());
-            if(chips.bet>chips.total)
+            int betAmount=Convert.ToInt32(Console.ReadLine());
+            chips.setBet(betAmount);
+            if(chips.getBet()>chips.getTotal())
             {
                 Console.WriteLine("not enough money");
                 continue;
@@ -90,25 +91,25 @@ public class Gameplay
 
     public static void show_some(Hand player,Hand dealer)
     {   Console.WriteLine("\nPlayer's hands");
-        var enu = player.cards;
+        var enu = player.getCards();
         foreach (var one in enu) 
             Console.WriteLine(one.ToString());
 
         Console.WriteLine("\ndealer's hands");
         Console.WriteLine("one card hidden!");
-        Console.WriteLine(dealer.cards[1].ToString());
+        Console.WriteLine(dealer.getCards()[1].ToString());
     }
 
     public static void show_all(Hand player,Hand dealer)
     {
         Console.WriteLine("\nPlayer's hands");
-        var enu2 = player.cards;
+        var enu2 = player.getCards();
         foreach (var one in enu2) 
             Console.WriteLine(one.ToString());
 
 
         Console.WriteLine("\ndealer's hands");
-        var enu1 = dealer.cards;
+        var enu1 = dealer.getCards();
         foreach (var one in enu1) {
             Console.WriteLine(one.ToString());
     }

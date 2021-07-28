@@ -5,8 +5,8 @@ namespace Project
 {
 public class Chip
     {
-        public int total;
-        public int bet;
+        private int total;
+        private int bet;
         public Chip()
         {
             this.total=100;
@@ -25,6 +25,19 @@ public class Chip
         public void lose_bet()
         {
             this.total=this.total-this.bet;
+        }
+
+        public int getTotal()
+        {
+            return this.total;
+        }
+        public int getBet()
+        {
+            return this.bet;
+        }
+        public void setBet(int bet)
+        {
+            this.bet=bet;
         }
     }
 
