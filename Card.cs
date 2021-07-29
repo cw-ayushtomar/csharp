@@ -5,6 +5,7 @@ namespace Project
 {
 public class Card
     {
+        //for security
         private string suit;
         private string rank;
         public Card(string suit,string rank)
